@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome | KESHO Aesthetics</title>
+</head>
+<body>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+
+.kesho-qr-page {
+  --kesho-cream: #f5f4f1;
+  --kesho-stone: #e9e7e2;
+  --kesho-white: #ffffff;
+  --kesho-ink: #272729;
+  --kesho-grey: #6d6d71;
+  --kesho-accent: #b0916a;
+  --kesho-accent-dark: #8f7350;
+  --kesho-line: #dcd9d3;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--kesho-ink);
+  background: var(--kesho-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.kesho-qr-page * { box-sizing: border-box; }
+.kesho-qr-page img { max-width: 100%; display: block; }
+.kesho-qr-page a { text-decoration: none; }
+
+.kesho-qr-page h1,
+.kesho-qr-page h2,
+.kesho-qr-page h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--kesho-ink);
+  margin: 0;
+}
+
+.kesho-qr-page .k-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kesho-accent-dark);
+  margin: 0 0 12px;
+}
+
+/* Buttons */
+.kesho-qr-page .k-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.kesho-qr-page .k-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 16px 30px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.kesho-qr-page .k-btn-primary { background: var(--kesho-accent); color: var(--kesho-white); }
+.kesho-qr-page .k-btn-primary:hover { background: var(--kesho-accent-dark); }
+
+.kesho-qr-page .k-btn-secondary { background: transparent; border-color: var(--kesho-ink); color: var(--kesho-ink); }
+.kesho-qr-page .k-btn-secondary:hover { background: var(--kesho-ink); color: var(--kesho-cream); }
+
+.kesho-qr-page .k-btn-outline { background: transparent; border-color: var(--kesho-accent); color: var(--kesho-accent-dark); padding: 12px 26px; }
+.kesho-qr-page .k-btn-outline:hover { background: var(--kesho-accent); color: var(--kesho-white); }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .k-cta-row { flex-direction: row; justify-content: center; align-items: center; }
+}
+
+/* Hero */
+.kesho-qr-page .kesho-qr-hero { padding: 56px 24px 48px; text-align: center; max-width: 640px; margin: 0 auto; }
+.kesho-qr-page .k-hero-logo { width: 110px; margin: 0 auto 28px; }
+.kesho-qr-page .kesho-qr-hero h1 { font-size: 2.5rem; line-height: 1.15; margin-bottom: 14px; }
+.kesho-qr-page .kesho-qr-hero h1 em { font-style: italic; font-weight: 500; color: var(--kesho-accent-dark); }
+.kesho-qr-page .k-hero-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; font-size: 1.15rem; color: var(--kesho-accent-dark); margin: 0 0 18px; }
+.kesho-qr-page .k-hero-lead { font-size: 1rem; color: var(--kesho-grey); max-width: 460px; margin: 0 auto; }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-hero { padding: 80px 24px 64px; }
+  .kesho-qr-page .kesho-qr-hero h1 { font-size: 3.5rem; }
+}
+
+/* Value props */
+.kesho-qr-page .kesho-qr-values {
+  background: var(--kesho-white);
+  border-top: 1px solid var(--kesho-line);
+  border-bottom: 1px solid var(--kesho-line);
+  padding: 40px 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.kesho-qr-page .k-value h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.kesho-qr-page .k-value p { font-size: 0.875rem; color: var(--kesho-grey); margin: 0; }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-values { grid-template-columns: repeat(4, 1fr); padding: 56px 24px; }
+}
+
+/* About */
+.kesho-qr-page .kesho-qr-about { max-width: 1000px; margin: 0 auto; padding: 48px 24px; display: flex; flex-direction: column; gap: 28px; }
+.kesho-qr-page .k-about-image img { border-radius: 3px; }
+.kesho-qr-page .k-about-text { text-align: center; }
+.kesho-qr-page .k-about-text h2 { font-size: 1.85rem; margin-bottom: 14px; }
+.kesho-qr-page .k-about-text p { color: var(--kesho-grey); max-width: 520px; margin: 0 auto; }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-about { flex-direction: row; align-items: center; padding: 72px 24px; gap: 56px; }
+  .kesho-qr-page .k-about-image, .kesho-qr-page .k-about-text { flex: 1; }
+  .kesho-qr-page .k-about-text { text-align: left; }
+  .kesho-qr-page .k-about-text p { margin: 0; }
+}
+
+/* Treatments */
+.kesho-qr-page .kesho-qr-treatments { background: var(--kesho-stone); padding: 48px 24px; text-align: center; }
+.kesho-qr-page .kesho-qr-treatments h2 { font-size: 1.85rem; margin-bottom: 12px; }
+.kesho-qr-page .k-section-lead { color: var(--kesho-grey); max-width: 520px; margin: 0 auto 32px; }
+.kesho-qr-page .k-treatment-grid { display: grid; grid-template-columns: 1fr; gap: 16px; max-width: 1000px; margin: 0 auto; text-align: left; }
+.kesho-qr-page .k-treatment-card { display: block; background: var(--kesho-white); border: 1px solid var(--kesho-line); border-radius: 3px; padding: 22px 24px; transition: border-color 0.2s ease, transform 0.2s ease; }
+.kesho-qr-page .k-treatment-card:hover { border-color: var(--kesho-accent); transform: translateY(-2px); }
+.kesho-qr-page .k-treatment-card h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.kesho-qr-page .k-treatment-card p { font-size: 0.875rem; color: var(--kesho-grey); margin: 0; }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-treatments { padding: 72px 24px; }
+  .kesho-qr-page .k-treatment-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Find us */
+.kesho-qr-page .kesho-qr-find { max-width: 1000px; margin: 0 auto; padding: 48px 24px; }
+.kesho-qr-page .kesho-qr-find h2 { font-size: 1.85rem; text-align: center; margin-bottom: 28px; }
+.kesho-qr-page .k-find-grid { display: flex; flex-direction: column; gap: 28px; }
+.kesho-qr-page .k-find-details { text-align: center; }
+.kesho-qr-page .k-find-details p { margin: 0 0 16px; color: var(--kesho-grey); font-size: 0.95rem; }
+.kesho-qr-page .k-find-details strong { display: block; font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--kesho-ink); margin-bottom: 4px; }
+.kesho-qr-page .k-find-details a { color: var(--kesho-accent-dark); font-weight: 600; }
+.kesho-qr-page .k-find-map iframe { width: 100%; height: 260px; border: 0; border-radius: 3px; }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-find { padding: 72px 24px; }
+  .kesho-qr-page .k-find-grid { flex-direction: row; align-items: center; gap: 56px; }
+  .kesho-qr-page .k-find-details, .kesho-qr-page .k-find-map { flex: 1; }
+  .kesho-qr-page .k-find-details { text-align: left; }
+  .kesho-qr-page .k-find-map iframe { height: 320px; }
+}
+
+/* Final CTA */
+.kesho-qr-page .kesho-qr-final { background: var(--kesho-ink); text-align: center; padding: 56px 24px; }
+.kesho-qr-page .kesho-qr-final h2 { color: var(--kesho-white); font-size: 1.9rem; margin-bottom: 12px; }
+.kesho-qr-page .kesho-qr-final p { color: var(--kesho-stone); margin: 0; }
+.kesho-qr-page .kesho-qr-final .k-cta-row { justify-content: center; }
+.kesho-qr-page .kesho-qr-final .k-btn-secondary { border-color: var(--kesho-cream); color: var(--kesho-cream); }
+.kesho-qr-page .kesho-qr-final .k-btn-secondary:hover { background: var(--kesho-cream); color: var(--kesho-ink); }
+.kesho-qr-page .k-final-note { display: inline-block; margin-top: 28px; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--kesho-accent); }
+
+@media (min-width: 768px) {
+  .kesho-qr-page .kesho-qr-final { padding: 80px 24px; }
+}
+</style>
+
+<div class="kesho-qr-page">
+
+  <section class="kesho-qr-hero">
+    <img class="k-hero-logo" src="https://www.keshofinchley.co.uk/wp-content/uploads/2026/06/6.png" alt="KESHO Aesthetics">
+    <span class="k-eyebrow">Welcome to</span>
+    <h1>KESHO <em>Aesthetics</em></h1>
+    <p class="k-hero-tagline">Timeless Confidence. Refined Results.</p>
+    <p class="k-hero-lead">You've found us — expert, personalised aesthetic treatments in the heart of Finchley, North London. Book your consultation in just a few taps.</p>
+    <div class="k-cta-row">
+      <a class="k-btn k-btn-primary" href="https://www.fresha.com/a/kesho-finchley-london-375-regents-park-road-b5ckp5ys/booking?pId=3004369&cartId=8bc83028-d063-4e12-abaf-d824bb757dd2" target="_blank" rel="noopener">Book a Consultation</a>
+      <a class="k-btn k-btn-secondary" href="https://wa.link/30acnr" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </section>
+
+  <section class="kesho-qr-values">
+    <div class="k-value">
+      <h3>Expert Care</h3>
+      <p>Highly trained professionals with a patient-first approach.</p>
+    </div>
+    <div class="k-value">
+      <h3>Personalised</h3>
+      <p>Tailored treatments designed for your unique beauty.</p>
+    </div>
+    <div class="k-value">
+      <h3>Safe &amp; Advanced</h3>
+      <p>Evidence-based treatments with premium products.</p>
+    </div>
+    <div class="k-value">
+      <h3>Natural Results</h3>
+      <p>Enhancing your features while keeping you, you.</p>
+    </div>
+  </section>
+
+  <section class="kesho-qr-about">
+    <div class="k-about-image">
+      <img src="https://www.keshofinchley.co.uk/wp-content/uploads/2026/06/kesho-room.png" alt="Inside KESHO Aesthetics, Finchley" loading="lazy">
+    </div>
+    <div class="k-about-text">
+      <span class="k-eyebrow">About Kesho</span>
+      <h2>Redefining Aesthetics With Intention</h2>
+      <p>KESHO Aesthetics is more than a clinic. It's a sanctuary for transformation, self-care and confidence — where every treatment is personalised with precision and care.</p>
+    </div>
+  </section>
+
+  <section class="kesho-qr-treatments">
+    <span class="k-eyebrow">Our Treatments</span>
+    <h2>Science. Art. You.</h2>
+    <p class="k-section-lead">Advanced aesthetic treatments designed to enhance your natural beauty and support your confidence.</p>
+    <div class="k-treatment-grid">
+      <a class="k-treatment-card" href="/anti-wrinkle/">
+        <h3>Anti-Wrinkle</h3>
+        <p>Smooth fine lines and prevent future wrinkles.</p>
+      </a>
+      <a class="k-treatment-card" href="/lip-fillers/">
+        <h3>Lip Fillers</h3>
+        <p>Enhance volume and shape with subtle refinement.</p>
+      </a>
+      <a class="k-treatment-card" href="/dermal-fillers/">
+        <h3>Dermal Fillers</h3>
+        <p>Restore volume and contour for natural definition.</p>
+      </a>
+      <a class="k-treatment-card" href="/skin-boosters/">
+        <h3>Skin Boosters</h3>
+        <p>Deep hydration for radiant, healthy skin.</p>
+      </a>
+      <a class="k-treatment-card" href="/microneedling/">
+        <h3>Microneedling</h3>
+        <p>Improve texture, tone and collagen production.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="kesho-qr-find">
+    <h2>Find Us in Finchley</h2>
+    <div class="k-find-grid">
+      <div class="k-find-details">
+        <p><strong>Address</strong>375 Regents Park Road<br>London N3 1DE</p>
+        <p><strong>Opening Hours</strong>Tue – Sat: 10am – 7pm<br>Sun – Mon: Closed</p>
+        <p><strong>Phone</strong><a href="tel:+442039835834">+44 20 3983 5834</a></p>
+        <a class="k-btn k-btn-outline" href="https://www.google.com/maps/dir/?api=1&destination=375+Regents+Park+Road,+London+N3+1DE" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div class="k-find-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2478.4357283457193!2d-0.19830578422672025!3d51.597818479650085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a293c66f56f%3A0xc00f0239cb0a95ad!2s375%20Regents%20Park%20Rd%2C%20London%20N3%201DE!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="kesho-qr-final">
+    <h2>Ready to Elevate Your Beauty?</h2>
+    <p>Book a consultation today and begin your personalised journey.</p>
+    <div class="k-cta-row">
+      <a class="k-btn k-btn-primary" href="https://www.fresha.com/a/kesho-finchley-london-375-regents-park-road-b5ckp5ys/booking?pId=3004369&cartId=8bc83028-d063-4e12-abaf-d824bb757dd2" target="_blank" rel="noopener">Book a Consultation</a>
+      <a class="k-btn k-btn-secondary" href="https://wa.link/30acnr" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+    <span class="k-final-note">375 Regents Park Road · Finchley · N3 1DE</span>
+  </section>
+
+</div>
+
+</body>
+</html>
